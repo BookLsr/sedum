@@ -1,0 +1,943 @@
+html,
+body {
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  color: $spring-color;
+  padding: 0;
+  margin: 0;
+  font-size: $spring-font-size;
+  font-family: $spring-font-family;
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+  line-height: 32px;
+  background-repeat: repeat-y;
+  background-size: 316px 1px;
+}
+
+body.light {
+  background-image: url(data:image/gif;base64,R0lGODlheAICAIAAAH2vUPf39yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDowRjJERDYwM0ZBMkIxMUU4QkFDMEIyRkQzQjlGREMwMiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDowRjJERDYwNEZBMkIxMUU4QkFDMEIyRkQzQjlGREMwMiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjBGMkRENjAxRkEyQjExRThCQUMwQjJGRDNCOUZEQzAyIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjBGMkRENjAyRkEyQjExRThCQUMwQjJGRDNCOUZEQzAyIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAHgCAgAAAiaEb6HL7Q+jnLTai7PevPsPhuJIluaJpmqJIOsLx/JM1/aN5/puFwA7);
+}
+
+div {
+  outline: none;
+}
+
+// -----------------
+// Header
+
+.header {
+  width: $spring-sidebar-width;
+  h1.logo {
+    width: 280px;
+    margin: 0px 20px 0px 24px;
+    padding: $spring-8points * 2 0px;
+    a {
+      display: block;
+      position: relative;
+      padding: 4px 0;
+      padding-left: 65px;
+      color: #000;
+      text-decoration: none;
+      font-size: 1rem;
+      line-height: 1.6rem;
+      font-weight: normal;
+      width: 205px;
+      outline: 1px dotted transparent;
+      span {
+        display: block;
+      }
+      span.title {
+        display: block;
+        font-size: 1.4rem;
+        font-weight: normal;
+        letter-spacing: -1px;
+        strong {
+          color: $spring-primary-color;
+        }
+      }
+      svg {
+        width: 50px;
+        position: absolute;
+        left: 0;
+        top: 6px;
+      }
+      &:focus {
+        outline: 1px dotted $spring-outline-color;
+      }
+    }
+  }
+}
+
+// -----------------
+// Quick Links
+
+.quick-links {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 450px;
+  text-align: right;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  li {
+    position: relative;
+    display: inline-block;
+    a {
+      padding: 8px;
+      padding-left: 28px;
+      padding-right: 4px;
+      position: relative;
+      color: $spring-color;
+      margin: 0px 12px;
+      text-decoration: none;
+      cursor: pointer;
+      outline: none;
+      @include transition(color $spring-transition-duration);
+      svg {
+        position: absolute;
+        left: 4px;
+        top: 8px;
+        height: 18px;
+      }
+      &:hover {
+        color: $spring-primary-color;
+      }
+      &.dropdown {
+        padding-right: 8px;
+        svg.icon-caret-down {
+          position: relative;
+          width: 10px;
+          top: 3px;
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+  ul.dropdown-menu {
+    z-index: 999;
+    position: absolute;
+    top: 34px;
+    right: 0px;
+    width: 220px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 10px;
+    text-align: left;
+    background: white;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    li {
+      display: block;
+      a {
+        display: block;
+        position: relative;
+        color: $spring-color;
+        padding: 4px 12px;
+        margin: 0px;
+        text-decoration: none;
+        @include transition(background $spring-transition-duration);
+        &:hover {
+          background: rgb(231, 241, 244);
+        }
+      }
+    }
+  }
+
+  .nav-anim-enter {
+    opacity: 0.01;
+    transform: scale(0.95);
+  }
+
+  .nav-anim-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 300ms;
+  }
+
+  .nav-anim-exit {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .nav-anim-exit-active {
+    opacity: 0.01;
+    transform: scale(0.95);
+    transition: all 300ms;
+  }
+
+  .switch-mode {
+    position: relative;
+    padding-left: 32px;
+    padding-right: 20px;
+    .switch {
+      position: absolute;
+      top: -3px;
+      left: 0;
+    }
+  }
+}
+
+// -----------------
+// Footer
+
+.footer {
+  background: $spring-gray-color;
+  line-height: 24px;
+  padding: 0 40px 8px 8px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: $spring-font-size-sm;
+  letter-spacing: -0.5px;
+  text-align: right;
+  margin-left: 8px;
+  .footer-container {
+    padding: 4px 0 0;
+  }
+  a {
+    @include link;
+  }
+}
+
+// -----------------
+// line
+
+.colset {
+  display: flex;
+  padding-right: 8px;
+  .left {
+    font-weight: 700;
+    width: 280px;
+    text-align: right;
+    position: relative;
+    padding: 8px 32px 8px 0px;
+    flex: 0 0 280px;
+    &.nopadding {
+      padding: 0;
+      flex: 0 0 310px;
+      margin-left: 6px;
+    }
+  }
+  .right {
+    max-width: 800px;
+    padding: 8px 0px 8px 32px;
+    flex: 2 1 0%;
+    min-height: 51px;
+    &.nopadding {
+      max-width: 600px;
+      margin-left: 28px;
+      flex: 2 1 0%;
+      padding: 0px;
+    }
+    &.right-md {
+      max-width: 500px;
+      padding: 8px 0px 8px 32px;
+      flex: 2 1 0%;
+      min-height: 187px;
+    }
+  }
+}
+
+// -----------------
+// Dependencies
+
+.dependencies-box {
+  padding: 8px 0 8px 32px;
+  flex: 2;
+  max-width: 900px;
+  @include transition(all $spring-transition-duration);
+  .colset-2 {
+    //padding: $spring-8points * 2;
+    padding-top: $spring-8points * 2.5;
+  }
+  &.large {
+    max-width: 1200px;
+  }
+}
+
+// -----------------
+// Colset 2
+
+.colset-2 {
+  display: flex;
+  min-height: 300px;
+  .column {
+    flex: 1 1 0%;
+    & + .column {
+      padding-left: 20px;
+    }
+  }
+}
+
+// -----------------
+// Control
+
+.control {
+  padding-top: 8px;
+  & + .control {
+    padding-top: 16px;
+  }
+}
+
+label {
+  display: block;
+  color: rgb(112, 108, 105);
+  font-size: 14px;
+  font-weight: lighter;
+  line-height: 17px;
+}
+
+.dependencies label {
+  padding: 8px 0;
+}
+
+.control-input {
+  display: block;
+  border: 0;
+  outline: none;
+  border-bottom: 3px solid #ebebeb;
+  line-height: 16px;
+  font-family: Karla, sans-serif;
+  font-size: 15px;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  width: 100%;
+  padding: 0.35rem 0 0.55rem;
+  border-radius: 0;
+  background: #fff;
+  @include transition(border-color $spring-transition-duration);
+  &:hover {
+    border-color: $spring-border-color-hover;
+  }
+  &:focus {
+    border-color: $spring-primary-color;
+  }
+}
+
+.button {
+  display: inline-block;
+  color: #222;
+  padding: 4px 32px;
+
+  border: 2px solid #f1f1f1;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  font-family: Karla, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+  line-height: 32px;
+  @include transition(all $spring-transition-duration);
+  white-space: nowrap;
+  text-decoration: none;
+  outline: 1px dotted transparent;
+  &:hover {
+    border: 2px solid #e4e4e4;
+    background-color: #e4e4e4;
+  }
+  &:focus {
+    outline: 1px dotted $spring-outline-color;
+  }
+  &.primary {
+    color: #fff;
+    border: 2px solid $spring-primary-color;
+    background-color: $spring-primary-color;
+    @include transition(all $spring-transition-duration);
+    &:hover {
+      border: 2px solid #5fa82f;
+      background-color: #5fa82f;
+    }
+  }
+  &.blue {
+    $blue: #3d96f7;
+    color: #fff;
+    border: 2px solid $blue;
+    background-color: $blue;
+    @include transition(all $spring-transition-duration);
+    &:hover {
+      border: 2px solid darken($blue, 2);
+      background-color: darken($blue, 2);
+    }
+  }
+  + .button {
+    margin-left: 6px;
+  }
+}
+
+.control-error {
+  padding: $spring-8points * 2 0;
+  p {
+    padding: 0;
+    margin: 0;
+    line-height: $spring-8points * 3;
+    a {
+      @include link;
+    }
+  }
+  .title {
+    color: #f30808;
+  }
+}
+
+.control-warning {
+  padding: 6px 0;
+  color: #eb4200;
+  a {
+    @include link;
+  }
+}
+
+.sticky {
+  position: sticky;
+  bottom: 0px;
+  z-index: 100;
+}
+
+// -----------------
+// Custom
+
+.see-all {
+  position: absolute;
+  top: 38px;
+  right: 35px;
+  font-weight: 400;
+  width: 80px;
+  height: 22px;
+  line-height: 22px;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #097dff;
+  outline: 1px dotted transparent;
+  @include outline();
+}
+
+.submit {
+  bottom: 0px;
+  width: auto;
+  background: white;
+  height: 36px;
+  padding: 18px 0 29px;
+  margin-right: 12px;
+  border-top: 1px solid #ccc;
+}
+
+.colset-submit {
+  .right.nopadding {
+    max-width: 100%;
+    background: white;
+    margin-left: 0;
+    padding-left: 28px;
+    max-width: 1212px;
+  }
+}
+
+.radio {
+  display: inline-block;
+  border-bottom: 3px solid $spring-border-color;
+  text-decoration: none;
+  color: #888;
+  line-height: 32px;
+  padding: 0 16px;
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+  margin-right: 4px;
+  @include transition(all $spring-transition-duration);
+  outline: 1px dotted transparent;
+  @include outline();
+  &:hover {
+    border-color: $spring-border-color-hover;
+    color: $spring-color;
+  }
+  &.checked {
+    border-bottom-color: $spring-primary-color;
+    color: #000;
+  }
+  &.err {
+    color: #8e1313;
+    background: #fbe5e5;
+    border-bottom-color: #d60000;
+    cursor: not-allowed;
+  }
+}
+
+.dependencies-list,
+ul.dependencies-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  .dependency-item {
+    @include tile();
+    //margin: $spring-8points / 2 0;
+  }
+  &.dependencies-list-checked {
+    .dependency-item-span {
+      padding: 6px 0;
+    }
+    .dependency-item {
+      //margin: $spring-8points * 2 0;
+    }
+  }
+  .dependency-item-span {
+    display: block;
+    padding-top: 4px;
+  }
+  li {
+    margin: 0;
+  }
+  .fade-enter {
+    max-height: 0;
+    opacity: 0;
+  }
+
+  .fade-enter-active {
+    max-height: 200px;
+    opacity: 1;
+    transition: all 250ms;
+  }
+
+  .fade-exit {
+    max-height: 200px;
+    opacity: 1;
+  }
+
+  .fade-exit-active {
+    max-height: 0;
+    opacity: 0;
+    transition: all 250ms;
+  }
+}
+
+.more {
+  line-height: 16px;
+  padding-top: 4px;
+  margin-top: 4px;
+  div.wrap {
+    border-bottom: 3px solid #ebebeb;
+    padding-bottom: 4px;
+    a {
+      position: relative;
+      display: block;
+      height: 28px;
+      line-height: 28px;
+      margin-top: 4px;
+      padding: 0 $spring-8points * 2 0 24px;
+      color: $spring-color;
+      text-decoration: none;
+      border-radius: $spring-radius;
+      outline: 1px dotted transparent;
+      @include transition(all $spring-transition-duration);
+      @include outline();
+      &:hover {
+        color: $spring-color;
+        svg {
+          color: $spring-primary-color;
+        }
+      }
+      svg {
+        position: absolute;
+        width: 8px;
+        left: 8px;
+        top: 8px;
+        color: $spring-color;
+        @include transition(all $spring-transition-duration);
+      }
+      &.toggle {
+        svg {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+}
+
+.panel {
+  overflow: hidden;
+  max-height: 0;
+  @include transition(all $spring-transition-duration * 3);
+  &.panel-active {
+    max-height: 600px;
+  }
+  .panel-wrap {
+    border: 1px solid lighten(#ebebeb, 4);
+    border-top: 0 none;
+    padding: $spring-8points * 1.5 $spring-8points * 3;
+    padding-bottom: $spring-8points * 3;
+  }
+}
+
+// -----------------
+// Group
+
+$gw: 200px;
+.groups {
+  padding: 0px 0px 16px 0;
+  .group {
+    line-height: 1.4rem;
+    position: relative;
+    padding-bottom: 12px;
+    a {
+      @include tile();
+      @include tilehover();
+    }
+    .group-title {
+      border-bottom: 1px solid $spring-border-color;
+      //padding-top: $spring-8points;
+      font-weight: bold;
+      margin-top: $spring-8points;
+      cursor: pointer;
+      span {
+        display: block;
+        position: relative;
+        margin: $spring-8points/2 0;
+        padding: $spring-8points/2 0;
+        padding-left: 26px;
+        font-size: 16px;
+        @include outline();
+
+        svg {
+          position: absolute;
+          top: 8px;
+          left: 8px;
+          width: 8px;
+          @include transition(all $spring-transition-duration);
+        }
+        &.toggleGroupItems {
+          svg {
+            transform: rotate(90deg);
+          }
+        }
+        &:hover {
+          svg {
+            color: $spring-primary-color;
+          }
+        }
+      }
+    }
+    &:first-child {
+      padding-top: 8px;
+    }
+  }
+  div.group-items {
+    padding-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(85, 0.75fr));
+    grid-gap: 8px 10px;
+  }
+}
+
+.search-label {
+  padding-bottom: 8px;
+}
+
+.search-no-selected {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.search-more-warning,
+.search-no-result {
+  padding: $spring-8points 0 $spring-8points * 2;
+  color: rgba(0, 0, 0, 0.5);
+  p {
+    padding: 0;
+    margin: 0;
+    line-height: 24px;
+    padding-left: 16px;
+  }
+}
+
+.search-no-result {
+  p {
+    padding-left: 0;
+  }
+}
+
+.sticky-label {
+  padding-top: $spring-8points / 2;
+  position: sticky;
+  top: 0;
+}
+
+// -----------------
+// Tab
+
+.tab {
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  background: white;
+  padding: 0 20px;
+  margin: 0 -20px;
+  margin-bottom: 10px;
+  .tab-container {
+    border-bottom: 3px solid lighten($spring-border-color, 6);
+  }
+  a {
+    display: inline-block;
+    margin-bottom: -3px;
+    text-decoration: none;
+    color: rgba($spring-color, 0.6);
+    border-bottom: 3px solid lighten($spring-border-color, 6);
+    padding: 15px $spring-8points * 2 11px;
+    font-weight: bold;
+    line-height: 16px;
+    outline: 1px dotted transparent;
+    @include transition(all $spring-transition-duration);
+    @include outline();
+    svg {
+      width: 16px;
+    }
+    &:hover {
+      color: $spring-color;
+      border-bottom: 3px solid $spring-border-color-hover;
+    }
+    &.active {
+      color: $spring-color;
+      border-bottom: 3px solid $spring-primary-color;
+    }
+  }
+  strong {
+    float: right;
+    font-weight: normal;
+    background-color: $spring-gray-color;
+    padding: 0 $spring-8points;
+    border-radius: $spring-radius;
+    line-height: $spring-8points * 3;
+    margin-top: 6px;
+    font-weight: bold;
+    color: rgba($spring-color, 0.7);
+    span {
+      color: $spring-color;
+    }
+  }
+}
+
+.loading-page,
+.error-page {
+  .text {
+    position: absolute;
+    left: 340px;
+    top: 25px;
+    padding-left: 44px;
+    padding-top: 4px;
+    color: rgba(0, 0, 0, 0.4);
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: $spring-primary-color;
+    }
+    p {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+.error-page {
+  .text {
+    left: 320px;
+    line-height: 20px;
+  }
+}
+
+#gatsby-noscript {
+  background: white;
+  display: block;
+  position: fixed;
+  left: 330px;
+  top: 10px;
+  padding: 15px;
+  z-index: 1000;
+  line-height: 24px;
+}
+
+.error {
+  position: fixed;
+  background: white;
+  display: block;
+  left: 350px;
+  top: 10px;
+  line-height: 24px;
+  h1 {
+    font-weight: normal;
+    font-size: 16px;
+    color: rgba($spring-color, 0.4);
+    padding: $spring-8points * 2 0 0;
+    span.title {
+      font-family: $spring-font-family-special;
+      font-size: 50px;
+      color: rgba($spring-color, 0.6);
+      padding-right: $spring-8points;
+    }
+  }
+
+  a {
+    @include link;
+  }
+}
+
+$placeholder-bg: #f7f7f7;
+$placeholder-border: #e4e4e4;
+
+.placeholder-radios {
+  .placeholder-radio {
+    display: inline-block;
+    height: 32px;
+    background: $placeholder-bg;
+    border-bottom: 3px solid $placeholder-border;
+    margin-right: 4px;
+  }
+}
+
+.placeholder-input {
+  display: block;
+  height: 32px;
+  background: $placeholder-bg;
+  border-bottom: 3px solid $placeholder-border;
+  position: relative;
+  margin-top: 15px;
+  &:after {
+    display: inline-block;
+    content: ' ';
+    position: absolute;
+    top: -15px;
+    left: 0;
+    height: 15px;
+    background: $placeholder-bg;
+    width: 70px;
+  }
+}
+
+.placeholder-text {
+  display: inline-block;
+  height: 14px;
+  background: $placeholder-bg;
+}
+
+.placeholder-dropdown {
+  display: block;
+  margin-top: -3px;
+  height: 32px;
+  background: $placeholder-bg;
+  border-bottom: 3px solid $placeholder-border;
+  position: relative;
+}
+.placeholder-tabs {
+  display: block;
+  height: 378px;
+  .placeholder-header {
+    display: block;
+    height: 45px;
+    border-bottom: 3px solid $placeholder-border;
+    position: relative;
+  }
+  .placeholder-tab {
+    display: inline-block;
+    height: 45px;
+    background: $placeholder-bg;
+    width: 42px;
+  }
+}
+
+.placeholder-button {
+  display: inline-block;
+  height: 44px;
+  background: $placeholder-bg;
+  position: relative;
+  border-radius: $spring-radius;
+  + .placeholder-button {
+    margin-left: 6px;
+  }
+}
+
+.warnings {
+  position: relative;
+  margin-bottom: $spring-8points;
+  background: #fff0d0;
+  padding: $spring-8points * 2;
+  color: #8f2500;
+  line-height: 26px;
+  margin-top: -45px;
+  .close {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px 12px;
+    height: 28px;
+    cursor: pointer;
+    opacity: 0.7;
+    color: #8f2500;
+    svg {
+      width: 14px;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+  ul {
+    padding: 0;
+    padding-left: 20px;
+    margin: 0;
+  }
+  li {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+// -----------------
+// Switch Component
+
+.switch-checkbox {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+.switch-label {
+  cursor: pointer;
+  width: 25px;
+  height: 16px;
+  position: relative;
+  display: inline-block;
+  &::after {
+    content: ' ';
+    width: 25px;
+    height: 6px;
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 6px;
+    top: 5px;
+  }
+}
+
+.switch-label .switch-button {
+  content: '';
+  z-index: 2;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  transition: 0.2s left;
+  background: $spring-color;
+}
+
+.switch-checkbox:checked + .switch-label .switch-button {
+  left: 9px;
+  background: $spring-color;
+  width: 16px;
+}
+
+.switch-label:active .switch-button {
+  width: 16px;
+}
