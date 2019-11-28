@@ -1,5 +1,6 @@
 ## sedum 景天
 > 项目简介：借用Spring Initializr生成初始化框架。
+> Spring Initializr地址：https://github.com/spring-io
 
 
 ### 功能描述
