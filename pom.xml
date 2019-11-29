@@ -15,7 +15,6 @@
 
     <modules>
         <module>sedum-start</module>
-        <module>sedum-generator</module>
         <module>sedum-client</module>
     </modules>
 
@@ -33,52 +32,6 @@
     <dependencyManagement>
         <dependencies>
             <!-- 工程model Start -->
-            <dependency>
-                <groupId>com.tb.sedum</groupId>
-                <artifactId>sedum-generator</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.spring.initializr</groupId>
-                <artifactId>initializr-version-resolver</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.spring.initializr</groupId>
-                <artifactId>initializr-actuator</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>io.spring.initializr</groupId>
-                <artifactId>initializr-docs</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>io.spring.initializr</groupId>
-                <artifactId>initializr-generator</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>io.spring.initializr</groupId>
-                <artifactId>initializr-generator-spring</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>io.spring.initializr</groupId>
-                <artifactId>initializr-metadata</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>io.spring.initializr</groupId>
-                <artifactId>initializr-web</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
 
             <dependency>
                 <groupId>com.tb.sedum</groupId>
