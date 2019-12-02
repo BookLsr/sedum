@@ -16,6 +16,7 @@
     <modules>
         <module>sedum-start</module>
         <module>sedum-client</module>
+        <module>sedum-generator</module>
     </modules>
 
     <!-- 指定编码以及编译版本 -->
@@ -35,6 +36,12 @@
 
             <dependency>
                 <groupId>com.tb.sedum</groupId>
+                <artifactId>sedum-generator</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.tb.sedum</groupId>
                 <artifactId>sedum-start</artifactId>
                 <version>${revision}</version>
             </dependency>
@@ -44,7 +51,6 @@
                 <artifactId>sedum-client</artifactId>
                 <version>${revision}</version>
             </dependency>
-
 
             <!-- 工程model End -->
         </dependencies>
