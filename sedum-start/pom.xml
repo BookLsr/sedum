@@ -40,7 +40,6 @@
         <dependency>
             <groupId>com.tb.sedum</groupId>
             <artifactId>sedum-client</artifactId>
-            <scope>runtime</scope>
         </dependency>
 
         <dependency>
