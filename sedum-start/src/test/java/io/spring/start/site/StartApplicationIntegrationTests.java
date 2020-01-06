@@ -19,6 +19,8 @@ package io.spring.start.site;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.regex.Pattern;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.spring.initializr.metadata.InitializrMetadata;
@@ -77,5 +79,7 @@ class StartApplicationIntegrationTests {
 		assertThat(actual.getConfiguration().getEnv().getBoms().size())
 				.isEqualTo(expected.getConfiguration().getEnv().getBoms().size());
 	}
+
+
 
 }
